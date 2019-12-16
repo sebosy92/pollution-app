@@ -12,24 +12,6 @@ app.use(express.json())
 
 app.use(express.static(publicDirectoryPath))
 
-
-
-// pollutedCities('Poland', (error, data) => {
-//     const cities = []
-//     const numberOfCities = data.length
-//     data.forEach((data) => {
-//         wikIDescription(data.name, function (error, wikiData)  {
-//             const object = {}
-//             object.name = data.name
-//             object.description = wikiData.extract
-//             cities.push(object)
-//             if (cities.length === numberOfCities){
-//                 console.log(cities)
-//             }
-//         })
-//     })
-// })
-
 app.get('', (req, res) => {
     res.send ('./public/index')
 })
