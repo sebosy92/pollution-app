@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html> 
+
+<head>
+    <title>Pollution-App</title>
+</head>
+
+<body>
+<h1>Test</h1>
+<form autocomplete="on">
+    <input placeholder="Country" >
+    <button>Search</button>
+</form>
+
+<div id="cities"></div>
+
+<script id="cities-template">
+    <div>
+        <h1>{{name}}</h1>
+        <a>{{description}}</a>
+    </div>
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+<script src="/js/app.js"></script>
+</body>
+
+</html>
