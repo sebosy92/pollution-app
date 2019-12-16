@@ -26,6 +26,7 @@ app.get ('/cities', (req, res) => {
 
     pollutedCities(req.query.country, (error, data) => {
         if (error) {
+            console.log(error)
             return res.send ({ error })
         }
         const cities = []

@@ -9,6 +9,7 @@ const pollutedCities = (country, callback) => {
 
     if (!isAllowed) {
         callback ('This country is out of our services. Please use another country.', undefined)
+        return
     }
    
     const url = `https://api.openaq.org/v1/cities?country=${countrShortcut[countryIndex]}&sort=desc&order_by=count&limit=10`
