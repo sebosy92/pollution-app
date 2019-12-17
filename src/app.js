@@ -5,11 +5,10 @@ const cors = require('cors')
 
 
 const app = express()
-const port = process.env.PORT
 
 const publicDirectoryPath =  path.join(__dirname, '../public')
 
-app.use(cors())
+app.use(cors)
 app.use(express.json())
 app.use(citiesRouter)
 app.use(express.static(publicDirectoryPath))
@@ -18,6 +17,4 @@ app.get('', (req, res) => {
     res.send ('./public/index')
 })
 
-app.listen(port, ()=> {
-    console.log('Server is up on port: ' + port)
-})
+module.exports = app

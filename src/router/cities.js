@@ -23,7 +23,7 @@ router.get ('/cities', async (req, res) => {
             const cities = []
             const numberOfCities = data.length
             data.forEach((data) => {
-                wikIDescription(data.name, function (error, wikiData)  {
+               wikIDescription(data.name, function (error, wikiData)  {
                     if (error) {
                         res.send ({ error })
                     }
